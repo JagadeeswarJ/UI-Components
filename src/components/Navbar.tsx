@@ -17,7 +17,7 @@ export default function Navbar() {
             to="/"
             className="text-white no-underline px-4 py-2 rounded transition-colors duration-300 hover:bg-gray-700"
           >
-            Home
+            Comp 1
           </Link>
         </li>
         <li>
@@ -25,7 +25,7 @@ export default function Navbar() {
             to="/comp2"
             className="text-white no-underline px-4 py-2 rounded transition-colors duration-300 hover:bg-gray-700"
           >
-            About
+            Comp 2
           </Link>
         </li>
         <li>
@@ -33,7 +33,7 @@ export default function Navbar() {
             to="/comp3"
             className="text-white no-underline px-4 py-2 rounded transition-colors duration-300 hover:bg-gray-700"
           >
-            Contact
+            Comp 3
           </Link>
         </li>
       </ul>

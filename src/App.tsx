@@ -10,7 +10,7 @@ function App() {
     <Router>
       <div className="min-h-screen flex flex-col">
         <Navbar />
-        <main className="flex-1 p-8 max-w-7xl mx-auto w-full">
+        <main className="flex-1 p-2 max-w-7xl mx-auto w-full">
           <Routes>
             <Route path="/" element={<Navigate to="/comp1" replace />} />
             <Route path="/comp1" element={<Comp1 />} />
