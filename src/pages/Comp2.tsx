@@ -2,6 +2,7 @@ import { useState } from "react";
 
 function Comp2() {
   const images = [
+    "/stackShow0.jpg",
     "/stackShow1.svg",
     "/stackShow2.svg",
     "/stackShow3.svg"
