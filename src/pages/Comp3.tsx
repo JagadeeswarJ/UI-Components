@@ -62,6 +62,7 @@ function Comp3() {
 
       <div className="flex items-center justify-center space-x-2">
         <button
+          type="button"
           onClick={prevSlide}
           disabled={isTransitioning}
           className={`transition-all duration-200 ${isTransitioning
@@ -69,12 +70,15 @@ function Comp3() {
               : 'hover:scale-110 hover:opacity-80'
             }`}
         >
-          <img src="/arrow-left.svg" alt="Previous" className="w-8 h-8" />
+          <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+          </svg>
         </button>
 
         {images.map((image, index) => (
           <button
             key={index}
+            type="button"
             onClick={() => goToSlide(index)}
             disabled={isTransitioning}
             className={`w-24 h-16 rounded-md overflow-hidden transition-all duration-300 transform ${index === currentIndex
@@ -91,6 +95,7 @@ function Comp3() {
         ))}
 
         <button
+          type="button"
           onClick={nextSlide}
           disabled={isTransitioning}
           className={`transition-all duration-200 ${isTransitioning
@@ -98,7 +103,9 @@ function Comp3() {
               : 'hover:scale-110 hover:opacity-80'
             }`}
         >
-          <img src="/arrow-right.svg" alt="Next" className="w-8 h-8" />
+          <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z"/>
+          </svg>
         </button>
       </div>
     </div>
