@@ -1,28 +1,23 @@
 import { useState, useEffect, useRef } from "react";
-
+import mainImg from "../../public/comp4/main.png"
 
 function Comp4() {
-  const [dotCount, setDotCount] = useState(0);
-  const diff = useRef(1);
-  useEffect(() => {
-    const interval = setInterval(() => {
 
-      setDotCount(prev => {
-        if (prev === 3) diff.current = -1;
-        if (prev === 0) diff.current = 1;
-        return prev + diff.current;
-      });
-    }, 500);
-
-    return () => clearInterval(interval);
-  }, []);
-
-  const dots = ".".repeat(dotCount);
-  const spaces = "_".repeat(3 - dotCount);
 
   return (
     <div className="flex items-center justify-center font-extrabold text-7xl text-center min-h-[90vh] font-mono">
-      Work in progress{dots}<span className="text-[#0e0e0e]">{spaces}</span>
+      <div className="relative overflow-hidden">
+        {/* Big image - bottom layer */}
+        <img src={mainImg} className="h-[400px] w-[650px] mx-auto rounded-2xl">
+        </img>
+        {/* Backdrop blur - middle layer */}
+        <div className="absolute inset-0 backdrop-blur-lg bg-[#0E0E0E]/70 z-10 rounded-2xl">
+
+        </div>
+        {/* Small image - top layer */}
+        <img src={mainImg} className="absolute inset-0 w-[220px] h-[400px] z-20 mx-auto">
+        </img>
+      </div>
     </div>
   );
 }
