@@ -66,12 +66,13 @@ function Comp3() {
           onClick={prevSlide}
           disabled={isTransitioning}
           className={`transition-all duration-200 ${isTransitioning
-              ? 'opacity-50 cursor-not-allowed'
-              : 'hover:scale-110 hover:opacity-80'
+            ? 'cursor-not-allowed'
+            : 'hover:scale-110 hover:opacity-80'
             }`}
         >
-          <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+          <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="15.625" cy="15.2617" r="15" fill="#1C1C1C" />
+            <path d="M10.934 17.2889C9.55134 16.2911 9.55134 14.2323 10.934 13.2345L15.412 10.0028C17.0654 8.80955 19.375 9.99098 19.375 12.03V18.4934C19.375 20.5325 17.0654 21.7139 15.412 20.5206L10.934 17.2889Z" fill="#E6570E" />
           </svg>
         </button>
 
@@ -82,8 +83,8 @@ function Comp3() {
             onClick={() => goToSlide(index)}
             disabled={isTransitioning}
             className={`w-24 h-16 rounded-md overflow-hidden transition-all duration-300 transform ${index === currentIndex
-                ? 'scale-105 shadow-lg ring-2 ring-orange-400'
-                : 'opacity-70 hover:opacity-100 hover:scale-102'
+              ? 'scale-105 shadow-lg ring-2 ring-orange-400'
+              : 'opacity-60 hover:opacity-100 hover:scale-102'
               } ${isTransitioning ? 'pointer-events-none' : ''}`}
           >
             <img
@@ -99,12 +100,13 @@ function Comp3() {
           onClick={nextSlide}
           disabled={isTransitioning}
           className={`transition-all duration-200 ${isTransitioning
-              ? 'opacity-50 cursor-not-allowed'
-              : 'hover:scale-110 hover:opacity-80'
+            ? 'cursor-not-allowed'
+            : 'hover:scale-105 hover:opacity-80'
             }`}
         >
-          <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z"/>
+          <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="15" cy="15" r="15" transform="matrix(-1 0 0 1 30.625 0.261719)" fill="#1C1C1C" />
+            <path d="M20.316 17.2889C21.6987 16.2911 21.6987 14.2323 20.316 13.2345L15.838 10.0028C14.1846 8.80955 11.875 9.99098 11.875 12.03V18.4934C11.875 20.5325 14.1846 21.7139 15.838 20.5206L20.316 17.2889Z" fill="#E6570E" />
           </svg>
         </button>
       </div>
