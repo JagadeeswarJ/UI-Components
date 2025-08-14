@@ -38,6 +38,22 @@ export default function Navbar() {
             Comp 3
           </Link>
         </li>
+        <li>
+          <Link
+            to="/comp4"
+            className="text-white no-underline px-2 py-1 rounded transition-all duration-300 border border-[#0e0e0e] hover:border-white"
+          >
+            Comp 4
+          </Link>
+        </li>
+        <li>
+          <Link
+            to="/progress"
+            className="text-white no-underline px-2 py-1 rounded transition-all duration-300 border border-[#0e0e0e] hover:border-white"
+          >
+            Progress
+          </Link>
+        </li>
       </ul>
     </nav>
   )
