@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
-import Navbar from "./components/Navbar";
+import Sidebar from "./components/Sidebar";
 import Comp1 from "./pages/Comp1";
 import Comp2 from "./pages/Comp2";
 import Comp3 from "./pages/Comp3";
@@ -10,8 +10,8 @@ function App() {
 
   return (
     <Router>
-      <div className="min-h-screen flex flex-col">
-        <Navbar />
+      <div className="flex h-screen">
+        <Sidebar />
         <main className="flex-1 p-2 max-w-7xl mx-auto w-full">
           <Routes>
             <Route path="/" element={<Navigate to="/comp1" replace />} />

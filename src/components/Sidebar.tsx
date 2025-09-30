@@ -1,16 +1,56 @@
-import { Link } from 'react-router-dom'
+import { useState } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
 
-export default function Navbar() {
+interface MenuItems {
+  name: string,
+  link: string
+}
+export default function Sidebar() {
+  const [open, setOpen] = useState(true)
+  const navigate = useNavigate();
+  const menuItems: MenuItems[] = [
+    {
+      name: "comp1",
+      link: "/comp1"
+    },
+    {
+      name: "comp2",
+      link: "/comp2"
+    },
+    {
+      name: "comp3",
+      link: "/comp3"
+    },
+    {
+      name: "comp4",
+      link: "/comp4"
+    },
+    {
+      name: "work-in-progress",
+      link: "/progress"
+    },
+
+  ]
   return (
-    <nav className="flex justify-between items-center px-8 py-2 bg-dark-800 border-b border-gray-700">
-      <div className="nav-brand">
-        <Link
-          to="/comp1"
-          className="text-2xl font-bold text-primary-500 hover:text-primary-600 transition-colors duration-300 no-underline"
-        >
-          Grafitti Components
-        </Link>
-      </div>
+    <div className={`h-screen bg-gray-900 p-3 flex flex-col transition-all duration-300 ${open ? "w-50" : "w-30"}`}>
+      <ul className="flex flex-col list-none gap-2">
+        {
+          menuItems.map((menuItem, index) => {
+            return <li className='text-white no-underline  rounded transition-all duration-300 py-2 pl-2 border border-gray-900 hover:border-white w-full cursor-pointer' onClick={() => navigate(menuItem.link)}>
+              {menuItem.name}
+              {/* <Link to={menuItem.link} className='text-white no-underline  rounded transition-all duration-300 border border-gray-900 hover:border-white w-full'>
+              </Link> */}
+            </li>
+          })
+        }
+
+      </ul>
+    </div>
+  )
+}
+
+/*
+
       <ul className="flex list-none gap-8 m-0 p-0">
         <li>
           <Link
@@ -55,6 +95,4 @@ export default function Navbar() {
           </Link>
         </li>
       </ul>
-    </nav>
-  )
-}
+*/
