@@ -10,6 +10,10 @@ export default function Sidebar() {
   const navigate = useNavigate();
   const menuItems: MenuItems[] = [
     {
+      name: "Hover Tracking",
+      link: "/hover-tracking"
+    },
+    {
       name: "reviews scrollable",
       link: "/review-scrollable"
     },
@@ -34,7 +38,7 @@ export default function Sidebar() {
   return (
     <div className={`h-screen bg-gray-900 p-3 flex flex-col transition-all duration-300 ${open ? "w-65" : "w-30"}`}>
       <h1 className='p-4 font-bold text-2xl'>
-        UI Verse
+        UI Labs
       </h1>
       <ul className="flex flex-col list-none gap-2">
         {

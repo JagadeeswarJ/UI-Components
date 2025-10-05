@@ -1,0 +1,11 @@
+.glassy-box {
+  background: rgba(128, 128, 128, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.selector {
+  pointer-events: none;
+}
