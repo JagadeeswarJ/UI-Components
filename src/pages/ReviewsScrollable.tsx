@@ -2,7 +2,7 @@
 import { useState } from "react";
 import rect1 from "/rec1.svg";
 
-function Comp1() {
+function ReviewsScrollable() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const totalSlides = 3;
   const slidesToShow = 2;
@@ -98,4 +98,4 @@ function Comp1() {
   )
 }
 
-export default Comp1
+export default ReviewsScrollable

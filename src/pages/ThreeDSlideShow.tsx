@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function Comp2() {
+function ThreeDSlideShow() {
   const images = [
     "/stackShow0.jpg",
     "/stackShow1.svg",
@@ -76,4 +76,4 @@ function Comp2() {
   );
 }
 
-export default Comp2
+export default ThreeDSlideShow

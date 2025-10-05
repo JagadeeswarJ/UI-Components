@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
-import mainImg from "../../public/comp4/main.png"
+import mainImg from "/comp4/main.png"
 
-function Comp4() {
+function PortraitToL() {
 
 
   return (
@@ -22,4 +22,4 @@ function Comp4() {
   );
 }
 
-export default Comp4;
+export default PortraitToL;
